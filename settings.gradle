@@ -1,3 +1,4 @@
 rootProject.name = "AndroidLibsExt"
 include ':app'
 include ':commonutils'
+include ':commonviews'

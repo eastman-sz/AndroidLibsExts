@@ -19,7 +19,7 @@ public interface BaseHttp {
 	 * @return 服务器的返回值
 	 * @throws Exception 请求异常（IOException...）
 	 */
-	public String sendRequest(HashMap<String, Object> params, String... urls) throws Exception;
+	String sendRequest(HashMap<String, Object> params, String... urls) throws Exception;
 	
 	/**
 	 * 向服务器发送请求，并返回数据。
@@ -29,7 +29,7 @@ public interface BaseHttp {
 	 * @return 服务器的返回值
 	 * @throws Exception 请求异常（IOException...）
 	 */
-	public String sendRequest(Context context, HashMap<String, Object> params, String... urls) throws Exception;
+	String sendRequest(Context context, HashMap<String, Object> params, String... urls) throws Exception;
 	
 	/**
 	 * 向服务器发送请求，并将数据放在Handler中返回。
@@ -38,7 +38,7 @@ public interface BaseHttp {
 	 * @param params 传递的参数KEY-VALUE的形式
 	 * @param handler 自定义的Handler
 	 */
-	public void sendRequest(Context context, HashMap<String, Object> params, Handler handler, String... urls);
+	void sendRequest(Context context, HashMap<String, Object> params, Handler handler, String... urls);
 	
 	/**
 	 * 向服务器发送请求，并将数据放在Handler中返回。
@@ -48,7 +48,7 @@ public interface BaseHttp {
 	 * @param handler 自定义的Handler
 	 * @param resultWhats 自定义的WHATS,用于接Handler中的数据
 	 */
-	public void sendRequest(Context context, HashMap<String, Object> params, Handler handler, int resultWhats, String... urls);
+	void sendRequest(Context context, HashMap<String, Object> params, Handler handler, int resultWhats, String... urls);
 	
 	/**
 	 * 向服务器发送请求，并将数据放在Message中,通过Handler返回。
@@ -58,5 +58,5 @@ public interface BaseHttp {
 	 * @param handler 自定义的Handler
 	 * @param msg 自定义的Message
 	 */
-	public void sendRequest(Context context, HashMap<String, Object> params, Handler handler, Message msg, String... urls);
+	void sendRequest(Context context, HashMap<String, Object> params, Handler handler, Message msg, String... urls);
 }
